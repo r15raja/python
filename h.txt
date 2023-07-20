@@ -1,0 +1,10 @@
+import util
+util.cel_to_fah()
+util.fah_to_cel()
+
+def celsius_to_fahrenheit():
+    celsius=float(input("enter temp in celsius: "))
+    print(32+9/5*celsius)
+def fahrenheit_to_celsius():
+    fahrenheit=float(input("enter temp in fahrenheit: "))
+    print(5/9*(fahrenheit-32))
