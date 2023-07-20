@@ -1,0 +1,9 @@
+readfile=open("n1.txt","r")
+writefile=open("n2.txt","w")
+readfilelines=readfile.readlines()
+for i in range(0,len(readfilelines)):
+    if(i%2==0):
+        writefile.write(readfilelines[i])
+        print(readfilelines[i])
+writefile.close()
+readfile.close()
