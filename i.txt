@@ -1,0 +1,32 @@
+class bill:
+    def _init_(self,date,custname):
+        self.date=date
+        self.custname=custname
+        self.items=[]
+    def additem(self,name,rate,quantity):
+        total=rate*quantity
+        item={
+            'name':name,
+            'rate':rate,
+            'quantity':quantity,
+            'total':total
+        }
+        self.items.append(item)
+    def display(self):
+        print("date:",self.date)
+        print("name",self.custname)
+        print("item\trate\tquantity\ttotal")
+        for i in self.items:
+            print(f"{i['name']}\t{i['rate']}\t{i['quantity']}\t{i['total']}")
+date=input("enter date")
+custname=input("enter name")
+mybill=bill(date,custname)
+while True:
+    item_name=input("enter name")
+    if item_name.lower()=='done':
+        break
+    item_rate=float(input("enter rate"))
+    item_quantity=int(input("enter quantity"))
+    mybill.additem(item_name,item_rate,item_quantity)
+
+mybill.display()
