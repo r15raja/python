@@ -1,0 +1,19 @@
+s=input("enter a string")
+def len(s):
+    if s=="":
+        return 0
+    else:
+        return 1+(len(s[1:]))
+print(len(s))
+
+def min_list(a):
+    if(len(a)==1):
+        return a[0]
+    return min((a[0]),min_list(a[1:]))
+a=[]
+n=int(input("enter thr number of values"))
+for i in range(n):
+    x=int(input("enter the values"))
+    a.append(x)
+    b=min_list(a)
+print("smallest number is ",b)
